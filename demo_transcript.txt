@@ -1,0 +1,21 @@
+Demo transcript (3-5 minutes)
+
+Intro (8-10 seconds):
+"Hello, my name is [Your Name]. This is a short demo of the eCourts Cause List Scraper. The repository and demo scripts are in the GitHub link: https://github.com/patanshanawaz/eCourts-Scraper-Intern-Task"
+
+Show repository (10-15 seconds):
+"Here is the project folder. The main script is `main.py`. The README includes usage instructions. I will demonstrate downloading the cause list and searching for a case using the CLI."
+
+Run cause list download (60-90 seconds):
+"Now I'll download the cause list for the specified court. The script will open Chrome, select the state, district, complex and court, set the date, and save the cause list as JSON and PDF if available." 
+(Show browser interacting, and then show saved `cause_list_dd_mm_yyyy.json` and PDF if present.)
+
+Run case search (45-60 seconds):
+"Next, I'll search the same cause list for an example CNR. The script will show the serial number and court name if the case is listed, and save a JSON containing matches."
+(Show console output and the `case_search_*.json` file.)
+
+Show outputs & finish (15-20 seconds):
+"Here are the saved files. The JSON contains the table rows extracted from the cause list. That concludes the demo. Thank you." 
+
+End (5 seconds):
+"Repository: https://github.com/patanshanawaz/eCourts-Scraper-Intern-Task"
