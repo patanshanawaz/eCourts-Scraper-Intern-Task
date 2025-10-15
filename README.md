@@ -42,7 +42,5 @@ Case status check is not implemented due to captcha.
 - Internet connection
 
 ## Output
-
 - `cause_list_dd_mm_yyyy.json`: JSON array of table rows
-- `cause_list_dd_mm_yyyy.pdf`: PDF if available</content>
-<parameter name="filePath">/Users/shanawaz/Developments/ecourts_scraper/README.md
+- `cause_list_dd_mm_yyyy.pdf`: PDF if available
