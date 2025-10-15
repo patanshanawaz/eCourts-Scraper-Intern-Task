@@ -22,33 +22,35 @@ def download_cause_list(state_code, district_code, court_complex_code, court_cod
         driver.get("https://services.ecourts.gov.in/ecourtindia_v6/?p=cause_list/index")
 
         # Wait for the form to load
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, "sess_state_code")))
+        WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.ID, "sess_state_code")))
 
         # Select state
         select_state = Select(driver.find_element(By.ID, "sess_state_code"))
         select_state.select_by_value(state_code)
 
         # Wait for district
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sess_dist_code")))
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "sess_dist_code")))
         select_district = Select(driver.find_element(By.ID, "sess_dist_code"))
         select_district.select_by_value(district_code)
 
         # Court complex
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sess_court_complex_code")))
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "sess_court_complex_code")))
         select_complex = Select(driver.find_element(By.ID, "sess_court_complex_code"))
         select_complex.select_by_value(court_complex_code)
 
         # Court
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sess_court_code")))
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "sess_court_code")))
         select_court = Select(driver.find_element(By.ID, "sess_court_code"))
         select_court.select_by_value(court_code)
 
         # Date
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "date")))
         date_input = driver.find_element(By.ID, "date")
         date_input.clear()
         date_input.send_keys(date_str)
 
         # Submit
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "submit")))
         submit_button = driver.find_element(By.ID, "submit")
         submit_button.click()
 
